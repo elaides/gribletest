@@ -19,7 +19,6 @@ import static com.codeborne.selenide.Selenide.$;
 public class LoginPage extends SelenideLoadablePage {
     String baseurl;
 
-
     public LoginPage(String baseurl) {
         this.baseurl = baseurl;
     }

@@ -12,9 +12,8 @@ import static com.codeborne.selenide.Selenide.$;
  * To change this template use File | Settings | File Templates.
  */
 public class PopUp {
-    public static SelenideElement container(){
-        return $(".contextMenu");
-    }
+    public static SelenideElement container(){ return $(".contextMenu");}
+
     public static void delete(){
         container().find(".delete a").click();
     }

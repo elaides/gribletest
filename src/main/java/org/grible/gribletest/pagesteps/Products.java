@@ -25,9 +25,7 @@ public class Products {
         return new ProductsPage(Login.page(), login, password);
     }
 
-    public static SelenideElement addProductButton() {
-        return $("#btn-add-product");
-    }
+    public static SelenideElement addProductButton() { return $("#btn-add-product");}
 
     public static void addProductForSure(String text){
         addProductButton().click();

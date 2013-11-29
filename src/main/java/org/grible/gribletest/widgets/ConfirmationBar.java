@@ -12,9 +12,8 @@ import static com.codeborne.selenide.Selenide.$;
  * To change this template use File | Settings | File Templates.
  */
 public class ConfirmationBar {
-    public static SelenideElement container(){
-        return $(".noty_bar");
-    }
+    public static SelenideElement container(){ return $(".noty_bar");}
+
     public static void confirm(){
         container().find(".btn-primary").click();
     }

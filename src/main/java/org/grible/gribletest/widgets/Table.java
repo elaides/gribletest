@@ -16,16 +16,9 @@ import static org.grible.gribletest.core.helpers.SelenideHelpers.contextClick;
  * To change this template use File | Settings | File Templates.
  */
 public class Table {
-    public static SelenideElement container(){
-        return $(".table");
-    }
-    public static SelenideElement row(String index){
-        return $(".table-row");
-    }
-
-    public static ElementsCollection cells(){
-        return $$(".table-cell");
-    }
+    public static SelenideElement container(){ return $(".table");}
+    public static SelenideElement row(String index){ return $(".table-row");}
+    public static ElementsCollection cells(){ return $$(".table-cell");}
 
     public static SelenideElement cellByText(String text){
 //        return $(By.xpath(""));

@@ -13,18 +13,8 @@ import static com.codeborne.selenide.Selenide.$;
  * To change this template use File | Settings | File Templates.
  */
 public class Dialog {
-    public static SelenideElement window(){
-        return $(".ui-dialog");
-    }
-    public static SelenideElement editBox(){
-        return window().find(".dialog-edit>input");
-    }
-
-    public static SelenideElement addButton(){
-        return window().find(byText("Add"));
-    }
-
-    public static SelenideElement cancelButton(){
-        return window().find(".btn-cancel");
-    }
+    public static SelenideElement window(){ return $(".ui-dialog");}
+    public static SelenideElement editBox(){ return window().find(".dialog-edit>input");}
+    public static SelenideElement addButton(){ return window().find(byText("Add"));}
+    public static SelenideElement cancelButton(){ return window().find(".btn-cancel");}
 }

@@ -13,9 +13,8 @@ import static com.codeborne.selenide.Selenide.$;
  * To change this template use File | Settings | File Templates.
  */
 public class UserPanel {
-    public static SelenideElement container() {
-        return $("#user-panel");
-    }
+    public static SelenideElement container() { return $("#user-panel");}
+
     public static void doLogout(){
         container().find("#lnk-logout>a").click();
     }
