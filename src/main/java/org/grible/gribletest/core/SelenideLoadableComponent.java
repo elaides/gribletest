@@ -22,9 +22,10 @@ public abstract class SelenideLoadableComponent {
         } catch (Error e) {
             Configuration.timeout = originalTimeout;
             load();
+            isLoaded();
         }
 
-        isLoaded();
+
     }
 
     protected abstract void load();  /*

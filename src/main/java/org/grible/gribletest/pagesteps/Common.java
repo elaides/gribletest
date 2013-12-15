@@ -17,12 +17,12 @@ public class Common {
     public static void cleanReLogin(){
         UserPanel.doLogout();
         cleanCookies();
-        Products.page().get();
+        ProductsList.page().get();
     }
 
     public static void cleanLogin(){
         cleanCookies();
         pressF5();
-        Products.page().get();
+        ProductsList.page().get();
     }
 }

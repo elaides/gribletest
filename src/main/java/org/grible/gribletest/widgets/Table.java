@@ -31,6 +31,7 @@ public class Table {
         }
     }
 
+
     public static void deleteCellForSure(SelenideElement cell){
         delete(cell);
         cell.shouldBe(notPresent);

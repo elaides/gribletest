@@ -1,8 +1,8 @@
 package org.grible.gribletest.core;
 
-import static com.codeborne.selenide.Condition.visible;
-
 import com.codeborne.selenide.SelenideElement;
+
+import static com.codeborne.selenide.Condition.visible;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,9 +14,9 @@ import com.codeborne.selenide.SelenideElement;
 public abstract class SelenideLoadablePage extends SelenideLoadableComponent {
     public abstract void open();
 
-    public abstract SelenideElement container();
+    public abstract SelenideElement identity();
 
     public void isLoaded(){
-        container().shouldBe(visible);
+        identity().shouldBe(visible);
     }
 }

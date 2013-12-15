@@ -1,7 +1,7 @@
 package org.grible.gribletest.pagesteps;
 
 import com.codeborne.selenide.SelenideElement;
-import org.grible.gribletest.pageobjects.ProductsPage;
+import org.grible.gribletest.pageobjects.ProductsListPage;
 import org.grible.gribletest.resources.TestConfig;
 import org.grible.gribletest.widgets.Dialog;
 import org.grible.gribletest.widgets.Table;
@@ -17,12 +17,12 @@ import static com.codeborne.selenide.Selenide.$;
  * To change this template use File | Settings | File Templates.
  */
 
-public class Products {
-    public static ProductsPage page(){
+public class ProductsList {
+    public static ProductsListPage page(){
         return page(TestConfig.login, TestConfig.password);
     }
-    public static ProductsPage page(String login, String password){
-        return new ProductsPage(Login.page(), login, password);
+    public static ProductsListPage page(String login, String password){
+        return new ProductsListPage(Login.page(), login, password);
     }
 
     public static SelenideElement addProductButton() { return $("#btn-add-product");}
@@ -32,6 +32,12 @@ public class Products {
         Dialog.editBox().setValue(text);
         Dialog.addButton().click();
         Table.cellByText(text).should(appear);
+    }
+
+    public static void ensureHasProduct(String productName){
+        if (!Table.cellByText(productName).exists()){
+            addProductForSure(productName);
+        }
     }
 }
 

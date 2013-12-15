@@ -2,9 +2,8 @@ package org.grible.gribletest.pageobjects;
 
 import com.codeborne.selenide.SelenideElement;
 import org.grible.gribletest.core.SelenideLoadablePage;
-import org.grible.gribletest.pagesteps.Products;
 import org.grible.gribletest.pagesteps.Login;
-import org.openqa.selenium.By;
+import org.grible.gribletest.pagesteps.ProductsList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,12 +12,12 @@ import org.openqa.selenium.By;
  * Time: 11:39
  * To change this template use File | Settings | File Templates.
  */
-public class ProductsPage extends SelenideLoadablePage {
+public class ProductsListPage extends SelenideLoadablePage {
     private LoginPage parent;
     private String login;
     private String password;
 
-    public ProductsPage(LoginPage parent, String login, String password) {
+    public ProductsListPage(LoginPage parent, String login, String password) {
         this.parent = parent;
         this.login = login;
         this.password = password;
@@ -30,8 +29,8 @@ public class ProductsPage extends SelenideLoadablePage {
     }
 
     @Override
-    public SelenideElement container() {
-        return Products.addProductButton().find(By.xpath("parent::*/parent::body"));
+    public SelenideElement identity() {
+        return ProductsList.addProductButton();
     }
 
     @Override

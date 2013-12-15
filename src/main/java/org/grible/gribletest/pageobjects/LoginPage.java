@@ -29,7 +29,7 @@ public class LoginPage extends SelenideLoadablePage {
     }
 
     @Override
-    public SelenideElement container() {
+    public SelenideElement identity() {
         return $("#login-form");
     }
 
